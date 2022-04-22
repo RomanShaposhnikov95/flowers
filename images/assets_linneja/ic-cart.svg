@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>2513C3AB-6627-49D9-9799-48D891C97443</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tematiskie-ziedi" transform="translate(-1452.000000, -86.000000)">
+            <g id="Navigation" transform="translate(376.000000, 0.000000)">
+                <g id="2nd" transform="translate(190.000000, 86.000000)">
+                    <g id="Icon" transform="translate(886.000000, 0.000000)">
+                        <rect id="icon-base" x="0" y="0" width="24" height="24"></rect>
+                        <path d="M1,1 L5,3 L5,15 L20,15 C21.6568542,15 23,13.6568542 23,12 L23,7 L23,7" id="element" stroke="#891F61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M5,15 L5,17 C5,18.1045695 5.8954305,19 7,19 L20,19 L20,19" id="element" stroke="#891F61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <circle id="element" stroke="#891F61" stroke-width="2" cx="10" cy="21" r="2"></circle>
+                        <circle id="element" stroke="#891F61" stroke-width="2" cx="20" cy="21" r="2"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
