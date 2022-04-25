@@ -21,7 +21,7 @@ body {
   height: 100%;
   font-family: "Montserrat", sans-serif;
   background: #FFFFFF;
-  padding-top: 60px;
+  padding-top: 104px;
 }
 
 a:hover {
@@ -83,6 +83,10 @@ use {
 @media screen and (max-width: 768px) {
   .button-grp {
     display: block;
+  }
+
+  body {
+    padding-top: 70px;
   }
 
   .button-grp .button {
@@ -252,7 +256,7 @@ use {
 /*header*/
 .header {
   background: #ffffff;
-  z-index: 100;
+  z-index: 105;
   position: fixed;
   top:0;
   width: 100%;
@@ -569,6 +573,11 @@ use {
   .header__min-menu li a {
     font-size: 13px;
     font-weight: bold;
+  }
+
+  .dropdown-item {
+    font-weight: unset !important;
+    font-size: 15px !important;
   }
 }
 

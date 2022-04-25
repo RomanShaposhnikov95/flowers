@@ -5,8 +5,6 @@
     <title>Ziedu piegāde (Rīgā, Jūrmalā, Mārupē, Ķekavā, Ādažos u.c. Pierīgā) - Ziedu salons LINNEJA (mūsu ziedu kurjers parūpēsies, lai puķu piegāde tiktu veikta Jūsu izvēlētajā laikā arī brīvdienās un svētku dienās)</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
@@ -19,7 +17,7 @@
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css'>
     <link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel='stylesheet' href='css/slick.min.css'>
     <link rel='stylesheet' href='font-awesome/css/font-awesome.min.css'>
     <link rel='stylesheet' href='js/jquery.mCustomScrollbar.css'>
@@ -199,15 +197,35 @@
                             <img src="images/assets_linneja/logo-svg.svg" alt="">
                         </a>
                         <div class="mobile-wrapper">
+                            <div class="header__search js-search header-control-style cart-wrap-mobile mobile-search">
+                                <button class="search-btn-mobile mobile-btn" data-toggle="modal" data-target="#exampleModal">
+                                    <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <title>B5155C45-D668-448C-B66B-5D0465CEF98D</title>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="375px---Menu" transform="translate(-188.000000, -23.000000)">
+                                                <g id="Group-2" transform="translate(165.000000, 0.000000)">
+                                                    <g id="Icon" transform="translate(23.000000, 23.000000)">
+                                                        <rect id="icon-base" x="0" y="0" width="24" height="24"></rect>
+                                                        <g id="Group-17" transform="translate(1.000000, 1.000000)" stroke="#891F61" stroke-linecap="round" stroke-width="2">
+                                                            <circle id="Oval" cx="10" cy="10" r="10"></circle>
+                                                            <line x1="17.3266018" y1="17.3266018" x2="22" y2="22" id="Path-2"></line>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
                             <div class="header__lang cart-wrap cart-wrap-mobile">
-                                <a href="/checkout-lv" class="header__links-item last">
+                                <a href="/checkout-lv" class="header__links-item last mobile-btn">
                                     <img src="images/assets_linneja/ic-cart.svg" alt="">
                                     <span>0.00 €</span>
                                 </a>
                             </div>
                             <button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                                <div class="hamburger-wrap">
-                                    <div class="hamburger" id="hamburger-1">
+                                <div class="hamburger-wrap mobile-btn">
+                                    <div class="hamburger " id="hamburger-1">
                                         <span class="line"></span>
                                         <span class="line"></span>
                                         <span class="line"></span>
@@ -230,97 +248,48 @@
                                         <li>
                                             <a href="#">Kontakti</a>
                                         </li>
-                                        <li>
-                                            <a href="#">Cits
-                                                <span>
-                                        <svg width="7px" height="4px" viewBox="0 0 7 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <title>483950FB-537D-4C32-B500-A0CCADCD6C95</title>
-                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
-                                                <g id="Tematiskie-ziedi" transform="translate(-934.000000, -47.000000)" stroke="#494C4D">
-                                                    <g id="Navigation" transform="translate(376.000000, 0.000000)">
-                                                        <g id="1st" transform="translate(190.000000, 40.000000)">
-                                                            <g id="Link-4" transform="translate(340.000000, 0.000000)">
-                                                                <g id="Icon" transform="translate(28.000000, 7.000000)">
-                                                                    <polyline id="icon" points="0.5 0.5 3.5 3.5 6.5 0.5"></polyline>
+                                        <li class="nav-item dropdown cits">
+                                            <a class="dropdown-toggle" href="/lv/davanas" id="navbarDropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Cits
+                                                <svg width="7px" height="4px" viewBox="0 0 7 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <title>CA920D3A-0E3C-44A4-B1F7-A7EC88C63E0C</title>
+                                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+                                                        <g class="arrow-svg" id="Sākumlapa" transform="translate(-848.000000, -96.000000)" stroke="#494C4D">
+                                                            <g id="Navigation" transform="translate(376.000000, 0.000000)">
+                                                                <g id="2nd" transform="translate(190.000000, 86.000000)">
+                                                                    <g id="Group-5" transform="translate(126.000000, 0.000000)">
+                                                                        <g id="Icon" transform="translate(156.000000, 10.000000)">
+                                                                            <polyline id="icon" points="0.5 0.5 3.5 3.5 6.5 0.5"></polyline>
+                                                                        </g>
+                                                                    </g>
                                                                 </g>
                                                             </g>
                                                         </g>
                                                     </g>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </span>
+                                                </svg>
                                             </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
                                         </li>
                                     </ul>
                                     <div class="header__top-menu-wrap">
                                         <div class="control-wrap">
-                                            <div class="header__search js-search header-control-style">
+                                            <div class="header__search js-search header-control-style cart-wrap-dc">
                                                 <img src="images/assets_linneja/ic-search.svg" alt="">
-                                                Meklēšana
-                                            </div>
-                                            <div class="search">
-                                                <form id="SearchForm" class="search-wrap" action="/search-lv" method="GET" data-autocomplete-src='/search/autocomplete?l=lv'>
-                                                    <div class="input-wrap">
-                                                        <input autocomplete="off" name="q" id="search-needle" class="" type="search" aria-label="Meklēt produktu" value="" placeholder="Meklēt produktu ">
-                                                    </div>
-                                                    <div id="autocomplete-suggestions"></div>
-                                                </form>
+                                                <button class="" data-toggle="modal" data-target="#exampleModal">
+                                                    Meklēšana
+                                                </button>
                                             </div>
                                         </div>
                                         <div class="header__links header__lang control-wrap">
                                             <div class="dropdown header__links-item ">
-                                                <button type="button" class="dropdown-toggle header-control-style" data-toggle="dropdown">
+                                                <button class="header-control-style auth" data-toggle="modal" data-target="#login">
                                                     <img src="images/assets_linneja/ic-login.svg" alt="">
                                                     Autorizācija
                                                 </button>
-                                                <div class="dropdown-menu no-close ">
-                                                    <h4>Ieiet sistēmā</h4>
-                                                    <form action="/user/process-login" class="login-form" method="POST">
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <div class="input-wrap">
-                                                                    <input type="email" class="form-control" name="email" id="f-email" placeholder="E-pasts">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col mt-2">
-                                                                <div class="input-wrap">
-                                                                    <input type="password" class="form-control" name="password" id="f-password" placeholder="Parole">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-12 d-flex align-items-center justify-content-center">
-                                                                <input type="submit" value="Ieiet" class="button-second w-100">
-                                                            </div>
-                                                            <div class="col-12 d-flex align-items-center justify-content-center mt-2">
-                                                                <a href="/password-recovery-lv" class="">Aizmirsu paroli</a>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                    <div class="seperator">
-                                                        <div>vai ieiet ar:</div>
-                                                    </div>
-                                                    <div class="soc-buttons">
-                                                        <div class='row'>
-                                                            <div class='col-12'>
-
-                                                                <a class="pinky" href="/registration/facebook">
-                                                                    <svg style="width: 16px; height: 18px;">
-                                                                        <use xlink:href="#fb"></use>
-                                                                    </svg>
-                                                                    Facebook
-                                                                </a>
-
-                                                            </div>
-                                                        </div>    </div>
-                                                    <div class="foot seperator">
-                                                        Esmu jauns lietotājs un
-                                                        <a href="/registration-lv">vēlos reģistrēties &raquo;</a>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                         <div class="control-wrap">
@@ -337,17 +306,116 @@
                                 </div>
                                 <div class="header__list">
                                     <ul class="header__min-menu">
-                                        <li>
-                                            <a href="/lv/ziedi">Ziedi un ..</a>
+                                        <li class="nav-item dropdown">
+                                            <a class=" dropdown-toggle" href="/lv/ziedi" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Ziedi un ..
+                                                <svg width="7px" height="4px" viewBox="0 0 7 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <title>CA920D3A-0E3C-44A4-B1F7-A7EC88C63E0C</title>
+                                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+                                                        <g class="arrow-svg" id="Sākumlapa" transform="translate(-848.000000, -96.000000)" stroke="#494C4D">
+                                                            <g id="Navigation" transform="translate(376.000000, 0.000000)">
+                                                                <g id="2nd" transform="translate(190.000000, 86.000000)">
+                                                                    <g id="Group-5" transform="translate(126.000000, 0.000000)">
+                                                                        <g id="Icon" transform="translate(156.000000, 10.000000)">
+                                                                            <polyline id="icon" points="0.5 0.5 3.5 3.5 6.5 0.5"></polyline>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                <a class="dropdown-item" href="#">Grieztie ziedi</a>
+                                                <a class="dropdown-item" href="#">Ziedu pušķi</a>
+                                                <a class="dropdown-item" href="#">Ziedi kastītē</a>
+                                                <a class="dropdown-item" href="#">Kāzu floristika</a>
+                                                <a class="dropdown-item" href="#">Sēru floristika</a>
+                                                <a class="dropdown-item" href="#">Kompozīcijas</a>
+                                                <a class="dropdown-item" href="#">Telpaugi</a>
+                                                <a class="dropdown-item" href="#">Visi ziedi</a>
+                                            </div>
                                         </li>
-                                        <li>
-                                            <a href="#">Tematiskie ziedi</a>
+                                        <li class="nav-item dropdown">
+                                            <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Tematiskie ziedi
+                                                <svg width="7px" height="4px" viewBox="0 0 7 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <title>CA920D3A-0E3C-44A4-B1F7-A7EC88C63E0C</title>
+                                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+                                                        <g class="arrow-svg" id="Sākumlapa" transform="translate(-848.000000, -96.000000)" stroke="#494C4D">
+                                                            <g id="Navigation" transform="translate(376.000000, 0.000000)">
+                                                                <g id="2nd" transform="translate(190.000000, 86.000000)">
+                                                                    <g id="Group-5" transform="translate(126.000000, 0.000000)">
+                                                                        <g id="Icon" transform="translate(156.000000, 10.000000)">
+                                                                            <polyline id="icon" points="0.5 0.5 3.5 3.5 6.5 0.5"></polyline>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
                                         </li>
-                                        <li>
-                                            <a href="/lv/nesakartoti-produkti">Smaržas un kosmētika</a>
+                                        <li class="nav-item dropdown">
+                                            <a class="dropdown-toggle" href="/lv/nesakartoti-produkti" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Smaržas un kosmētika
+                                                <svg width="7px" height="4px" viewBox="0 0 7 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <title>CA920D3A-0E3C-44A4-B1F7-A7EC88C63E0C</title>
+                                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+                                                        <g class="arrow-svg" id="Sākumlapa" transform="translate(-848.000000, -96.000000)" stroke="#494C4D">
+                                                            <g id="Navigation" transform="translate(376.000000, 0.000000)">
+                                                                <g id="2nd" transform="translate(190.000000, 86.000000)">
+                                                                    <g id="Group-5" transform="translate(126.000000, 0.000000)">
+                                                                        <g id="Icon" transform="translate(156.000000, 10.000000)">
+                                                                            <polyline id="icon" points="0.5 0.5 3.5 3.5 6.5 0.5"></polyline>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
                                         </li>
-                                        <li>
-                                            <a href="/lv/davanas">Dāvanas</a>
+                                        <li class="nav-item dropdown">
+                                            <a class="dropdown-toggle" href="/lv/davanas" id="navbarDropdownMenuLink4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Dāvanas
+                                                <svg width="7px" height="4px" viewBox="0 0 7 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <title>CA920D3A-0E3C-44A4-B1F7-A7EC88C63E0C</title>
+                                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+                                                        <g class="arrow-svg" id="Sākumlapa" transform="translate(-848.000000, -96.000000)" stroke="#494C4D">
+                                                            <g id="Navigation" transform="translate(376.000000, 0.000000)">
+                                                                <g id="2nd" transform="translate(190.000000, 86.000000)">
+                                                                    <g id="Group-5" transform="translate(126.000000, 0.000000)">
+                                                                        <g id="Icon" transform="translate(156.000000, 10.000000)">
+                                                                            <polyline id="icon" points="0.5 0.5 3.5 3.5 6.5 0.5"></polyline>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
                                         </li>
                                     </ul>
                                     <div class="header__lang cart-wrap cart-wrap-dc">
@@ -365,21 +433,8 @@
         </nav>
     </header>
 
-
-    <div class="banner" style="background-image: url('uploads/banners/th/banner.png');">
-        <div class="container">
-            <div class="banner__inner">
-                <div class="banner__content">
-                    <h1 style="text-align: center;"></h1>
-
-                    <h1></h1>
-
-                    <h1><strong></strong></h1>
-
-                    <h1><a href="#"><u></u></a></h1>
-                </div>
-            </div>
-        </div>
+    <div class="general-img">
+        <img src="uploads/banners/th/banner.png" alt="">
     </div>
 
     <div class="container">
@@ -433,7 +488,7 @@
                     </ul>
                 </div>
 
-                <div class="info-content-wrap themes">
+                <div class="info-content-wrap themes gallery-block">
                     <h2 class="subtitle">Mēs sagatavosim visu, lai skaistāki mirkļi pārtop par vēl skaistākiem</h2>
                     <p class="descr preparation">
                         Ziedi iepriecina vienmēr – gan svētkos, gan īpašos mirkļos,
@@ -443,44 +498,82 @@
                 </div>
 
                 <div class="gallery-wrap">
-                    <div class="gallery compact-gallery compact-gallery-1">
-                        <div class="main-img">
-                            <img class="largeImg" id="largeImg" src="images/img/1.jpeg" alt="">
+                    <div id="simpleModal" class="modal modal-slider">
+                        <div class="modal-content  modal-content-slider">
+                            <span class="closeBtn closeBtn-Slider">&times;</span>
+                            <!-- Swiper modal -->
+                            <div id="swiper-container-modal" class="swiper-container-modal">
+                                <div id="swiper-modal" class="swiper-wrapper">
+                                    <div class="swiper-slide swiper-slide-modal">
+                                        <div class="swiper-zoom-container">
+                                            <img class="swiper-lazy swiper-lazy-modal" data-src="images/img/1.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-modal">
+                                        <div class="swiper-zoom-container">
+                                            <img class="swiper-lazy swiper-lazy-modal" data-src="images/img/2.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-modal">
+                                        <div class="swiper-zoom-container">
+                                            <img class="swiper-lazy swiper-lazy-modal" data-src="images/img/3.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-modal">
+                                        <div class="swiper-zoom-container">
+                                            <img class="swiper-lazy swiper-lazy-modal" data-src="images/img/4.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-modal">
+                                        <div class="swiper-zoom-container">
+                                            <img class="swiper-lazy swiper-lazy-modal" data-src="images/img/5.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-modal">
+                                        <div class="swiper-zoom-container">
+                                            <img class="swiper-lazy swiper-lazy-modal" data-src="images/img/6.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-modal">
+                                        <div class="swiper-zoom-container">
+                                            <img class="swiper-lazy swiper-lazy-modal" data-src="images/img/7.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-modal">
+                                        <div class="swiper-zoom-container">
+                                            <img class="swiper-lazy swiper-lazy-modal" data-src="images/img/8.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-modal">
+                                        <div class="swiper-zoom-container">
+                                            <img class="swiper-lazy swiper-lazy-modal" data-src="images/img/9.jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add Pagination -->
+                                <div id="swiper-button-next-modal" class="swiper-button-next"><img src="images/assets_linneja/ic-arrow-long-right.svg" alt=""></div>
+                                <div id="swiper-button-prev-modal" class="swiper-button-prev"><img src="images/assets_linneja/ic-arrow-long-left.svg" alt=""></div>
+                            </div>
                         </div>
-                        <div id="thumbs" class="just-imgs">
-                            <a class="just-img">
-                                <img src="images/img/1.jpeg">
-                            </a>
-                            <a class="just-img">
-                                <img src="images/img/2.jpeg">
-                            </a>
-                            <a class="just-img">
-                                <img src="images/img/3.jpeg">
-                            </a>
-                            <a class="just-img">
-                                <img src="images/img/4.jpeg">
-                            </a>
-                            <a class="just-img">
-                                <img src="images/img/5.jpeg">
-                            </a>
-                            <a class="just-img">
-                                <img src="images/img/6.jpeg">
-                                <div class="img-count">5</div>
-                            </a>
-                            <a class="just-img">
-                                <img src="images/img/7.jpeg">
-                            </a>
-                            <a class="just-img">
-                                <img src="images/img/8.jpeg">
-                            </a>
-                            <a class="just-img">
-                                <img src="images/img/9.jpeg">
-                            </a>
+                    </div>
+
+                    <!-- Swiper -->
+                    <div class="swiper swiper-container-main">
+                        <div id="swiper-slide-block" class="swiper-wrapper">
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-button-next"><img src="images/assets_linneja/ic-arrow-long-right.svg" alt=""></div>
+                        <div class="swiper-button-prev"><img src="images/assets_linneja/ic-arrow-long-left.svg" alt=""></div>
+                    </div>
+
+                    <!-- Swiper thumbnails -->
+                    <div class="swiper gallery-thumbs">
+                        <div id="swiper-thumb" class="swiper-wrapper gallery-thumbs-all">
                         </div>
                     </div>
                 </div>
 
-                <div class="info-content-wrap themes">
+                <div class="info-content-wrap themes possibility">
                     <h2 class="subtitle">Kāds iespaids paliek mūsu klientiem?</h2>
                     <p class="descr">
                         Ziedi iepriecina vienmēr – gan svētkos, gan īpašos mirkļos,
@@ -595,8 +688,9 @@
     </div>
 
     <div class="flower-options container">
-        <div class="d-flex align-items-center h-100">
+        <div class="d-flex align-items-center">
             <div class="bground">
+                <img src="images/assets_linneja/asset_creative_background.png" alt="">
                 <div class="asset-creative-border">
                     <div class="flower-description subtitle">Hey! Vai tu zināji, ka vari izveidot personīgo pušķi?</div>
                     <a href="/lv/ziedi/individuali-puski/definejams-puskis" class="flower-btn">Izveidot pušķi</a>
@@ -608,7 +702,9 @@
     <div class="container">
         <div class="about-shop-wrap">
             <div class="about-shop-left">
-                <img src="images/assets_linneja/logo_header.png" alt="">
+                <div class="about-shop-left-wrap">
+                    <img src="images/assets_linneja/logo_header.png" alt="">
+                </div>
             </div>
 
             <div class="about-shop-right">
@@ -1037,9 +1133,28 @@
             </div>
         </div>
     </footer>
+
 </div>
 
 <a href="#body" id="back-to-top"></a>
+
+<a href="#" id="message-btn">
+    <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>7AC5B0F7-20B3-49A9-A4A5-7599E23DE979</title>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="375px" transform="translate(-318.000000, -690.000000)" stroke="#FFFFFF" stroke-width="2">
+                <g id="Button---Fixed---Scroll-to-form" transform="translate(300.000000, 672.000000)">
+                    <g id="Icon" transform="translate(18.000000, 18.000000)">
+                        <g id="mail" transform="translate(2.000000, 4.000000)">
+                            <path d="M2,0 L18,0 C19.1,0 20,0.9 20,2 L20,14 C20,15.1 19.1,16 18,16 L2,16 C0.9,16 0,15.1 0,14 L0,2 C0,0.9 0.9,0 2,0 Z" id="Path"></path>
+                            <polyline id="Path" points="20 2 10 9 0 2"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </svg>
+</a>
 
 <div class="overlay"></div>
 
@@ -1081,6 +1196,141 @@
     </div>
 </div>
 
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-title">Meklēšana</div>
+            <form id="SearchForm" class="search-form" action="/search-lv" method="GET" data-autocomplete-src='/search/autocomplete?l=lv'>
+                <input autocomplete="off" name="q" id="search-needle" class="" type="search" aria-label="Meklēt produktu" value="" placeholder="Ievadiet preces nosaukumu..">
+            </form>
+            <div id="autocomplete" class="value-wrapper showResult">
+                <div id="value-list" class="value-list">
+                   <a href="#" class="variant">
+                       <div class="value-wrap">
+                           <div class="variant-img-wrap">
+                               <img src="images/assets_linneja/flow.png" alt="">
+                           </div>
+                           <div>
+                               <div class="value-title">Ziedu pušķis “Elegance”</div>
+                               <div class="value-subtitle">Kategorija: Ziedu pušķis</div>
+                           </div>
+                       </div>
+                       <div class="value-price">€ 19,00</div>
+                   </a>
+                    <a href="#" class="variant">
+                        <div class="value-wrap">
+                            <div class="variant-img-wrap">
+                                <img src="images/assets_linneja/flow.png" alt="">
+                            </div>
+                            <div>
+                                <div class="value-title">Ziedu pušķis “Elegance”</div>
+                                <div class="value-subtitle">Kategorija: Ziedu pušķis</div>
+                            </div>
+                        </div>
+                        <div class="value-price">€ 19,00</div>
+                    </a>
+                    <a href="#" class="variant">
+                        <div class="value-wrap">
+                            <div class="variant-img-wrap">
+                                <img src="images/assets_linneja/flow.png" alt="">
+                            </div>
+                            <div>
+                                <div class="value-title">Ziedu pušķis “Elegance”</div>
+                                <div class="value-subtitle">Kategorija: Ziedu pušķis</div>
+                            </div>
+                        </div>
+                        <div class="value-price">€ 19,00</div>
+                    </a>
+                    <a href="#" class="variant">
+                        <div class="value-wrap">
+                            <div class="variant-img-wrap">
+                                <img src="images/assets_linneja/flow.png" alt="">
+                            </div>
+                            <div>
+                                <div class="value-title">Ziedu pušķis “Elegance”</div>
+                                <div class="value-subtitle">Kategorija: Ziedu pušķis</div>
+                            </div>
+                        </div>
+                        <div class="value-price">€ 19,00</div>
+                    </a>
+                </div>
+                   <div class="watch_all_link">
+                       <a href="#" class="">Aplūkot visus <span>50</span> atrastos rezultātus</a>
+                   </div>
+
+            </div>
+
+            <button class="close-btn" data-dismiss="modal">
+                <img src="images/assets_linneja/ic-close_popup.svg" alt="">
+                Close
+            </button>
+        </div>
+    </div>
+    <button class="general-close-btn" data-dismiss="modal">
+        <img src="images/assets_linneja/ic-close_popup-red.svg" alt="">
+    </button>
+</div>
+
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-title">Ieiet sistēmā</div>
+            <div class="form-wrapper">
+                <form action="/user/process-login" class="login-form" method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-wrap">
+                                <input type="email" class="form-control" name="email" id="f-email" placeholder="E-pasts">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mt-2">
+                            <div class="input-wrap">
+                                <input type="password" class="form-control" name="password" id="f-password" placeholder="Parole">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 d-flex align-items-center justify-content-center">
+                            <input type="submit" value="Ieiet" class="button-second w-100">
+                        </div>
+                        <div class="col-12 d-flex align-items-center justify-content-center mt-2">
+                            <a href="/password-recovery-lv" class="">Aizmirsu paroli</a>
+                        </div>
+                    </div>
+                </form>
+                <div class="seperator">
+                    <div>vai ieiet ar:</div>
+                </div>
+                <div class="soc-buttons">
+                    <div class='row'>
+                        <div class='col-12'>
+
+                            <a class="pinky" href="/registration/facebook">
+                                <svg style="width: 16px; height: 18px;">
+                                    <use xlink:href="#fb"></use>
+                                </svg>
+                                Facebook
+                            </a>
+
+                        </div>
+                    </div>    </div>
+                <div class="foot seperator">
+                    Esmu jauns lietotājs un
+                    <a href="/registration-lv">vēlos reģistrēties &raquo;</a>
+                </div>
+            </div>
+            <button class="close-btn" data-dismiss="modal">
+                <img src="images/assets_linneja/ic-close_popup.svg" alt="">
+                Close
+            </button>
+        </div>
+    </div>
+    <button class="general-close-btn" data-dismiss="modal">
+        <img src="images/assets_linneja/ic-close_popup-red.svg" alt="">
+    </button>
+</div>
 
 <script src='https://code.jquery.com/jquery-3.3.1.js'></script>
 <script src='https://code.jquery.com/ui/1.12.1/jquery-ui.js'></script>
@@ -1088,8 +1338,9 @@
 <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
 <script src='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js'></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-<script src="js/gallery.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/modal.js"></script>
 <script src='js/jquery.mCustomScrollbar.min.js'></script>
 <script src='js/spin.js'></script>
 <script src='js/slick.js'></script>

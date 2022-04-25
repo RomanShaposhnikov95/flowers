@@ -24,15 +24,6 @@ $(document).ready(function () {
     Search.init();
 
 
-    $('.js-menu, .js-lang').on('click', function () {
-        $(this).next().toggleClass('open');
-    });
-
-    $('.js-search').on('click', function () {
-        $(this).next().toggleClass('open').find('[type=search]').focus();
-    });
-
-
     // Слайдер
     initSlider();
     initFilters();
@@ -290,7 +281,8 @@ var Search = {
                         type: "GET",
                         url: link + '&q=' + q,
                         success: function (response) {
-                            $('#autocomplete-suggestions').addClass('show').html(response);
+                            $('#autocomplete').addClass('showResult');
+                            $('#value-list').html(response);
                         }
                     });
                 }, 500);
@@ -324,9 +316,19 @@ function initSlider() {
 
 $(function () {
     $(window).scroll(function () {
+        let w = $(window).width();
         if ($(this).scrollTop() > 300) {
+            if(w <= 768) {
+                $('#back-to-top').fadeIn();
+                $('#message-btn').fadeIn();
+            }
             $('#back-to-top').fadeIn();
+
         } else {
+            if(w <= 768) {
+                $('#back-to-top').fadeOut();
+                $('#message-btn').fadeOut();
+            }
             $('#back-to-top').fadeOut();
         }
     });
@@ -344,8 +346,10 @@ $(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 0) {
             $('.header__inner').addClass('scrolled');
+            $('.header').addClass('scroll-style');
         } else {
             $('.header__inner').removeClass('scrolled');
+            $('.header').removeClass('scroll-style');
         }
     });
 

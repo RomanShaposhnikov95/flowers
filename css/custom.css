@@ -474,9 +474,8 @@ a:hover {
   background-position: center center;
   background-repeat: no-repeat;
   bottom: 1px;
-  display: block;
   position: fixed;
-  right: 30px;
+  right: 15px;
   transition: opacity .2s ease-in-out 0s, visibility 0s linear 0s;
   z-index: 104;
   height: 60px;
@@ -608,7 +607,7 @@ a:hover {
 .flower-options {
   /*height: 424px;*/
   position: relative;
-  margin-top: 124px;
+  margin-top: 126px;
   margin-bottom: 103px;
 
 }
@@ -620,7 +619,7 @@ a:hover {
 }
 
 .bground {
-  height: 296px;
+  min-height: 296px;
   width: 100%;
   background-color: #F6D8E0;
   padding: 20px;
@@ -628,16 +627,17 @@ a:hover {
   overflow-x: clip;
 }
 
-.bground:before {
-  content: url("../images/assets_linneja/asset_creative_background.png");
-  position: absolute;
-  top: -84px;
-  right: 0;
-  max-height: 424px;
-}
+/*.bground:before {*/
+/*  content: url("../images/assets_linneja/asset_creative_background.png");*/
+/*  position: absolute;*/
+/*  top: -84px;*/
+/*  right: 0;*/
+/*  max-height: 424px;*/
+/*}*/
 
 .asset-creative-border {
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
+  min-height: 256px;
   height: 100%;
   border: 1px solid #FFFFFF;
   background: transparent;
@@ -648,6 +648,14 @@ a:hover {
   flex-direction: column;
   justify-content: center;
 }
+
+.bground img {
+  position: absolute;
+  top: -84px;
+  right: 0;
+}
+
+
 
 .flower-description, .subtitle {
   color: #000000;
@@ -677,6 +685,40 @@ a:hover {
   line-height: 19px;
   padding: 16px;
   text-align: center;
+}
+
+
+
+@media screen and (max-width: 750px) {
+  .flower-options {
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+
+  .bground {
+    min-height: 399px;
+  }
+
+  .asset-creative-border {
+    min-height: 359px;
+  }
+
+  .bground img {
+    max-width: 700px;
+    top: 39%;
+  }
+
+
+  .flower-description {
+    max-width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  .flower-options {
+    margin-bottom: 50px;
+  }
 }
 
 .add-to-cart-message {
@@ -936,9 +978,9 @@ a:hover {
     /*    display: none;*/
     /*}*/
 
-    .wrapper > .banner + .delivery {
-        margin-top: 50px;
-    }
+    /*.wrapper > .banner + .delivery {*/
+    /*    margin-top: 50px;*/
+    /*}*/
 
   .logo-container {
     height: 60px;
