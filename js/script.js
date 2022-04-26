@@ -318,14 +318,14 @@ $(function () {
     $(window).scroll(function () {
         let w = $(window).width();
         if ($(this).scrollTop() > 300) {
-            if(w <= 768) {
+            if(w <= 750) {
                 $('#back-to-top').fadeIn();
                 $('#message-btn').fadeIn();
             }
             $('#back-to-top').fadeIn();
 
         } else {
-            if(w <= 768) {
+            if(w <= 750) {
                 $('#back-to-top').fadeOut();
                 $('#message-btn').fadeOut();
             }
@@ -337,6 +337,13 @@ $(function () {
     $('#back-to-top').click(function () {
         $('body,html').animate({
             scrollTop: 0
+        }, 1600);
+        return false;
+    });
+
+    $('#message-btn').click(function () {
+        $('body,html').animate({
+            scrollTop: $('#form-content').offset().top
         }, 1600);
         return false;
     });
